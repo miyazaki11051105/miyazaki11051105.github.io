@@ -84,23 +84,62 @@ hr {
   border-top: 1px solid #bbb;
 }
 
-.intro {
-  display: grid;
-  grid-template-columns: 165px 1fr;
-  gap: 26px;
-  align-items: start;
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 32px;
+  font-size: 14px;
 }
 
-.intro img {
-  width: 165px;
-  height: 210px;
-  object-fit: cover;
-  object-position: 50% 30%;
-  border: 1px solid #ccc;
+.contact-links a {
+  text-decoration: underline;
+  text-decoration-color: #c5cbd3;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
-.intro p:first-child {
-  margin-top: 0;
+.contact-links a:hover {
+  text-decoration-color: currentColor;
+}
+
+.contact-email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0;
+}
+
+.contact-label {
+  color: #666;
+  font-size: 12px;
+}
+
+.contact-email a {
+  color: #333;
+  overflow-wrap: anywhere;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.profile-links span {
+  color: #666;
+  font-size: 12px;
 }
 
 section {
@@ -200,16 +239,6 @@ footer hr {
     padding-top: 12px;
   }
 
-  .intro {
-    grid-template-columns: 120px 1fr;
-    gap: 18px;
-  }
-
-  .intro img {
-    width: 120px;
-    height: 156px;
-  }
-
   .dated-list li {
     padding-left: 0;
   }
@@ -218,15 +247,5 @@ footer hr {
     position: static;
     display: block;
     width: auto;
-  }
-}
-
-@media (max-width: 400px) {
-  .intro {
-    display: block;
-  }
-
-  .intro img {
-    margin-bottom: 14px;
   }
 }
